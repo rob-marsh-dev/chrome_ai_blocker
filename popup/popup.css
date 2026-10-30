@@ -1,0 +1,35 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  width: 280px;
+  margin: 12px;
+  font: 13px system-ui, sans-serif;
+}
+
+label {
+  display: flex;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+input {
+  margin: 2px 0 0;
+}
+
+strong,
+small {
+  display: block;
+}
+
+small,
+p {
+  opacity: 0.7;
+}
+
+p {
+  margin: 8px 0 0;
+  font-size: 12px;
+}

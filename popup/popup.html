@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <form id="modes">
+      <label>
+        <input type="radio" name="mode" value="web" />
+        <span>
+          <strong>Web results only</strong>
+          <small>Most reliable. Also removes Google's other widgets.</small>
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="mode" value="hide" />
+        <span>
+          <strong>Hide AI only</strong>
+          <small>Keeps the normal results page. May need updates if Google changes it.</small>
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="mode" value="off" />
+        <span>
+          <strong>Off</strong>
+          <small>Leaves Google unchanged.</small>
+        </span>
+      </label>
+    </form>
+    <p>Applies to your next search.</p>
+    <script src="popup.js"></script>
+  </body>
+</html>

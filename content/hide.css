@@ -1,0 +1,6 @@
+html:not([data-ai-blocker-off]) [data-attrid="AIOverview"],
+html:not([data-ai-blocker-off]) a[href*="udm=50&"],
+html:not([data-ai-blocker-off]) a[href$="udm=50"],
+[data-ai-blocker-hidden] {
+  display: none !important;
+}

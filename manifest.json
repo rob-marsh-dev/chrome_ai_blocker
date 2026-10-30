@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "AI Search Blocker",
+  "version": "0.1.0",
+  "description": "Removes AI Overviews and AI Mode from Google Search.",
+  "permissions": ["declarativeNetRequestWithHostAccess", "storage"],
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://www.google.co.uk/*",
+    "https://www.google.ca/*",
+    "https://www.google.com.au/*",
+    "https://www.google.co.nz/*",
+    "https://www.google.ie/*",
+    "https://www.google.co.in/*",
+    "https://www.google.co.za/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "AI Search Blocker",
+    "default_popup": "popup/popup.html"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "web_only",
+        "enabled": true,
+        "path": "rules/web-only.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search*",
+        "https://www.google.co.uk/search*",
+        "https://www.google.ca/search*",
+        "https://www.google.com.au/search*",
+        "https://www.google.co.nz/search*",
+        "https://www.google.ie/search*",
+        "https://www.google.co.in/search*",
+        "https://www.google.co.za/search*"
+      ],
+      "css": ["content/hide.css"],
+      "js": ["content/hide.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
